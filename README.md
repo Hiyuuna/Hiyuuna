@@ -14,6 +14,3 @@ Here are some ideas to get you started:
 - 😄 Pronouns: ...
 - ⚡ Fun fact: ...
 -->
-:link: BOJ
-
-[![Solved.ac Profile](http://mazassumnida.wtf/api/mini/generate_badge?boj=Endzz)](https://solved.ac/Endzz)
