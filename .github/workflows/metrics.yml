@@ -10,7 +10,7 @@ jobs:
     permissions:
       contents: write
     steps:
-      - uses: Hiyuuna/metrics@latest
+      - uses: lowlighter/metrics@v3.34
         with:
           token: ${{ secrets.METRICS_TOKEN }}
           filename: metrics.base.svg
@@ -18,8 +18,9 @@ jobs:
           template: classic
           base: header, activity, community, repositories, metadata
           config_timezone: Asia/Seoul
-
-      - uses: Hiyuuna/metrics@latest
+          
+      - uses: lowlighter/metrics@v3.34
+      
         with:
           token: ${{ secrets.METRICS_TOKEN }}
           filename: metrics.languages.svg
