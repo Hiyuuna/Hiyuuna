@@ -8,21 +8,24 @@ jobs:
   github-metrics:
     runs-on: ubuntu-latest
     permissions:
-      contents: write
+      contents: read
     steps:
       - uses: lowlighter/metrics@v3.34
         with:
           token: ${{ secrets.METRICS_TOKEN }}
+          output_action: gist
+          committer_gist: 2ee6e31a4e9b577e2be4573451e43f01
           filename: metrics.base.svg
           user: Hiyuuna
           template: classic
           base: header, activity, community, repositories, metadata
           config_timezone: Asia/Seoul
-          
+
       - uses: lowlighter/metrics@v3.34
-      
         with:
           token: ${{ secrets.METRICS_TOKEN }}
+          output_action: gist
+          committer_gist: 2ee6e31a4e9b577e2be4573451e43f01
           filename: metrics.languages.svg
           user: Hiyuuna
           template: classic
@@ -37,4 +40,5 @@ jobs:
           plugin_languages_recent_days: 30
           plugin_languages_analysis_timeout: 15
           plugin_languages_ignored: html, css, tex, makefile, dockerfile
-          commits_authoring: Hiyuuna, Yuna Cho, 126624365+Hiyuuna@users.noreply.github.com
+          repositories_forks: no
+          commits_authoring: ${{ secrets.COMMITS_AUTHORING }}
